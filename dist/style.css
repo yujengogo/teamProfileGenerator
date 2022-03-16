@@ -1,0 +1,14 @@
+.header{
+    background-color: rgb(114, 188, 253);
+    color: whitesmoke;
+
+}
+.card{
+    color: black;
+    background-color: bisque;
+    box-shadow: 2px, gray, inset;
+}
+.card-header{
+    color: whitesmoke;
+    background-color: black;
+}
