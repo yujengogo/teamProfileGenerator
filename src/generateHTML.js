@@ -24,7 +24,7 @@ function changeRole(employee) {
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID = ${employee.id}</li>
               <li class="list-group-item">Email = ${employee.email}</li>
-              <li class="list-group-item">Office Number = ${employee.github}</li>
+              <li class="list-group-item">Github = ${employee.github}</li>
             </ul>
           </div>`
         case "Intern":
@@ -37,7 +37,7 @@ function changeRole(employee) {
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">ID = ${employee.id}</li>
                   <li class="list-group-item">Email = ${employee.email}</li>
-                  <li class="list-group-item">Office Number = ${employee.school}</li>
+                  <li class="list-group-item">School = ${employee.school}</li>
                 </ul>
               </div>`
 
@@ -57,22 +57,22 @@ const generateHTML = (myEmployees) => {
             <link rel="stylesheet" href="style.css">
         </head>
         <body>
-        <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="header">
-                <div>
-                    <h1 id="my-name">Let's Get Your Team Register!</h1>
-                </div>
+        <body>
+            <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Let's Get Your Team Register!</h1>
             </div>
-
-            ${
-                myEmployees.map((employee) => {
-                    return changeRole(employee)
-                })
-            }
-            
-            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+            </div>
+      
+            <div class="container">
+                ${
+                    myEmployees.map((employee) => {
+                        return changeRole(employee)
+                    })
+                }
+            </div>
+                <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
         </body>
     </html>
     `
